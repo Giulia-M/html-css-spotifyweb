@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dark {
+    background-color: #282828;
+}
+.box-img {
+    width: 50px;
+}
+.box-img img {
+    width: 100%;
+} 
+.display-flex {
+    display: flex;
+    flex-direction: row;
+}
+.align-items{
+    align-items: center;
+    display: flex;
+}
+.display-flex-column {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}

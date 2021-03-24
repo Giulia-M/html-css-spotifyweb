@@ -5,9 +5,60 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify Web</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
+        <!-- 2 macroaree una sotto l'altra  -->
+    
+        <!-- toolbar contenitore padre  con 3 figli -->
+        <div class="display-flex dark">
+            <!-- contenuto a sinistra: con 4 elementi  -->
+            <div class="display-flex">
+                <!-- img del brano -->
+                <div class="align-items">
+                    <div class="box-img">
+                        <img src="img/sinister.jpeg" alt="sinister">
+                    </div>
+                </div>
+                <!--div con 2 elementi uno SOTTO l'altro  -->
+                <div class="display-flex-column">
+                    <div>
+                        <h5>Sinister</h5>
+                    </div>
+                    <div>
+                        <span>Brano Nome</span>
+                    </div>
+                </div>
+                <!--cuore brano preferito  -->
+                <div class="align-items">
+                    <i class="fa fa-heart-o"></i>
+                </div>
+                <!-- folder  -->
+                <div class="align-items">
+                    <i class="fa fa-folder-o"></i>
+                </div>
+            </div>
+
+            <!--  barra-play del brano ha 2 div uno sotto l'altro   -->
+            <div class="display-flex">
+                <div></div>
+                <div></div>
+            </div>
+
+            <!-- ho 3 elementi all'interno in row   -->
+            <div class="display-flex">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- main -->
+        <main>
+
+        </main>
     </body>
 </html>
