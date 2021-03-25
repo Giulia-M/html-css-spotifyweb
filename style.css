@@ -15,7 +15,10 @@
 .float-left {
     float: left;
 }
-.clearfix {
+.float-right {
+    float: right;
+}
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
@@ -58,6 +61,15 @@
 .wrapper-player {
     flex-basis: 400px;
 }
+
+/* smartphone  */
+@media all and (max-width:768px) {
+    .wrapper-player {
+        flex-basis: auto;
+    }
+}
+
+
 .text-center {
     text-align: center;
 }
@@ -99,8 +111,7 @@
 }
 #volum-bar {
     height: 5px;
-    width: 100px;
-    /* perchè qui non funziona flex-basis? */
+    width: 50px;
 }
 
 /* MAIN */
@@ -114,6 +125,9 @@ aside {
     flex-direction: column;
     width: 150px;
     flex-shrink: 1;
+    overflow:auto;
+    /* in modo che mi compare la 
+    scroll nella sezione della playlist */
 }
 
 /* aside */
@@ -137,6 +151,7 @@ aside {
 }
 .playlist-prefer {
     flex-grow: 1;
+    overflow:auto;
 }
 /* versione smartphone */
 @media all and (max-width: 768px) {
@@ -161,4 +176,35 @@ aside {
     .visible-sm-inline-block {
         display: inline-block;
     }
+}
+
+/* SECTION 2 ACCANTO L'ASIDE  */
+.wrapper-lost-of-music {
+    width: calc(100vw - 150px);
+    overflow: auto;
+
+}
+.wrapper-lost-of-music > div> button> a {
+    background-color:#080b12;
+}
+
+
+
+/*  */
+.list-options {
+    text-align: center;
+}
+.list-options li {
+    list-style: none;
+    display: inline-block;
+} 
+.list-options > li> a {
+    color: white;
+}
+/* tablet */
+@media all and (min-width: 992px) {
+    .list-options > li  {
+        width: calc(100% / 5 - 10px);
+    }
+    /* non so se da la giusta centratura tra i testi */
 }
