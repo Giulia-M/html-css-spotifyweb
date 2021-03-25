@@ -244,6 +244,17 @@ div.music-playback-history>div {
         flex-basis: 50%;
     }
 }
-.text-align {
-    text-align: center;
+
+/* SEZIONE intitolata per john doe */
+.content-custom-list {
+    display: flex;
+    flex-wrap: wrap;
 }
+.content-custom-list >div {
+    flex-basis: calc(100% / 6);
+    padding: 0 10px;
+}
+.content-custom-list >div>img {
+    width: 100%;
+}
+/*  */
