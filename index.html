@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Spotify Web</title>
+        
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -13,18 +14,21 @@
     <body>
         <!-- 2 macroaree una sotto l'altra  -->
     
-        <!-- toolbar contenitore padre  con 3 figli -->
-        <div class="display-flex dark">
-            <!-- contenuto a sinistra: con 4 elementi  -->
-            <div class="display-flex">
+        <!-- toolbar contenitore padre con 3 figli -->
+
+        <!-- PROBLEMA nelle versioni mobile e tablet : non rimane nessun spazio tra i 3 figli  -->
+        <div class="toolbar dark text-white">
+
+            <!-- contenuto a sinistra:  con 3 elementi  -->
+            <div class="content-left">
                 <!-- img del brano -->
-                <div class="align-items">
+                <div class="">
                     <div class="box-img">
                         <img src="img/sinister.jpeg" alt="sinister">
                     </div>
                 </div>
                 <!--div con 2 elementi uno SOTTO l'altro  -->
-                <div class="display-flex-column">
+                <div class="padd">
                     <div>
                         <h5>Sinister</h5>
                     </div>
@@ -32,27 +36,54 @@
                         <span>Brano Nome</span>
                     </div>
                 </div>
-                <!--cuore brano preferito  -->
-                <div class="align-items">
-                    <i class="fa fa-heart-o"></i>
-                </div>
-                <!-- folder  -->
-                <div class="align-items">
-                    <i class="fa fa-folder-o"></i>
-                </div>
+                <!--cuore brano preferito e folder che in xs(<768px) e sm(>768) devono stare una sotto l'altra perciò aggiungo la media query    -->
+                <div class="display-flex-column">
+                    <span class="padd">
+                        <i class="fa fa-heart-o"></i>
+                    </span>
+                    <span class="padd">
+                        <i class="fa fa-folder-o"></i>
+                    </span>
+                </div> 
             </div>
 
-            <!--  barra-play del brano ha 2 div uno sotto l'altro   -->
-            <div class="display-flex">
-                <div></div>
-                <div></div>
+            <!--  contenuto centrale ha 2 div uno SOTTO l'altro   -->
+            <div class="wrapper-player">
+               
+                <!-- è un problema se vanno a capo ridimensionando lo schermo? -->
+                <div class="text-center">
+                    <span class="video-player-icon"><i class="fa fa-random"></i></span>
+                    <span class="video-player-icon"><i class="fa fa-step-backward"></i></span>
+                    <span class="video-player-icon" id="play-circle"><i class="fa fa-play-circle-o"></i></span>
+                    <span class="video-player-icon"><i class="fa fa-step-forward"></i></span>
+                    <span class="video-player-icon"><i class="fa fa-repeat"></i></span>
+                </div>
+
+                <!-- playbackbar -->
+                <div class="playbackbar">
+                    <div>0:25</div>
+                    <div class="progress" id="general-bar">
+                        <div class="progress-value"></div>
+                    </div>
+                    <div>4:35</div>
+                </div>
+                
             </div>
 
-            <!-- ho 3 elementi all'interno in row   -->
-            <div class="display-flex">
-                <div></div>
-                <div></div>
-                <div></div>
+            <!-- contenuto a destra: ha 3 elementi all'interno  -->
+            <div class="content-right">
+                <span class="padd">
+                    <i class="fa fa-list"></i>
+                </span>
+                <span class="padd">
+                    <i class="fa fa-desktop"></i>
+                </span>
+                <span class="padd">
+                    <i class="fa fa-volume-up"></i>
+                </span>
+                <div class="progress padd" id="volum-bar">
+                    <div class="progress-value"></div>
+                </div>
             </div>
         </div>
 

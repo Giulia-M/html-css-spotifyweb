@@ -3,25 +3,102 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* colori  */
 .dark {
     background-color: #282828;
 }
+.text-white {
+    color: white;
+}
+/* classi helper */
+
+.float-left {
+    float: left;
+}
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* TOOLBAR */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    height:60px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* content -left */
+.content-left {
+    display: flex;
+    align-items: center;
+}
+
 .box-img {
     width: 50px;
 }
 .box-img img {
     width: 100%;
 } 
-.display-flex {
-    display: flex;
-    flex-direction: row;
+.padd {
+    padding: 0 5px;
 }
-.align-items{
+
+@media all and (max-width:991px) {
+    .display-flex-column {
+        flex-direction: column;
+        display: flex;
+    }
+}
+
+/*content-middle  */
+.wrapper-player {
+    flex-basis: 400px;
+}
+.text-center {
+    text-align: center;
+}
+.playbackbar{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.video-player-icon {
+    padding: 0 7px ;
+}
+#play-circle{
+    font-size: 25px;
+}
+
+/* progress-bar */
+.progress {
+    background: rgba(255,255,255,0.1);
+    border-radius: 100px;
+    padding: 0 5px;
+    display: flex; 
+}
+  
+.progress-value {
+    border-radius: 100px;
+    background: #fff;
+    height: 5px;
+    width:20px;
+}
+#general-bar {
+    height: 5px;
+    flex-basis: 300px;
+}
+/*content-right  */
+.content-right {
     align-items: center;
     display: flex;
 }
-.display-flex-column {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
+#volum-bar {
+    height: 5px;
+    width: 100px;
+    /* perchè qui non funziona flex-basis? */
 }
