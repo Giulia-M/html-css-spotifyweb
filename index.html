@@ -16,13 +16,13 @@
     
         <!-- toolbar contenitore padre con 3 figli -->
 
-        <!-- PROBLEMA nelle versioni mobile e tablet : non rimane nessun spazio tra i 3 figli  -->
+        <!-- PROBLEMA nelle versioni mobile e tablet : non rimane nessun spazio tra i 3 figli  sotto i 478px-->
         <div class="toolbar dark text-white">
 
             <!-- contenuto a sinistra:  con 3 elementi  -->
             <div class="content-left">
                 <!-- img del brano -->
-                <div class="">
+                <div>
                     <div class="box-img">
                         <img src="img/sinister.jpeg" alt="sinister">
                     </div>
@@ -87,9 +87,66 @@
             </div>
         </div>
 
-        <!-- main -->
-        <main>
+        <!-- main ha due contenuti uno A FIANCO all'altro-->
+        <!-- perchè ridimensionando lo schermo height del main mi da problemi? -->
+        <main class="text-white">
+            <!-- aside -->
+            <aside>
+                <div class="">
+                    <div class="img-spotify hidden-xs visible-sm-inline-block">
+                        <img src="img/logo.svg" alt="logo spotify">
+                    </div>
+                    <div class="logo-small-brand hidden-sm visible-xs-inline-block">
+                        <img src="img/logo-small.svg" alt="logo small">
+                    </div>
 
+                </div>
+
+                <div>
+                    <div>
+                        <img class="icon-home" src="img/home.svg" alt="home">
+                        <span class="text-home hidden-xs">Home</span> 
+                    </div>
+                    <div>
+                        <img class="icon-home" src="img/search.svg" alt="search">
+                        <span class="text-home hidden-xs">Cerca</span> 
+                    </div>
+                    <div>
+                        <img class="icon-home" src="img/libreria.svg" alt="libreria">
+                        <span class="text-home hidden-xs">La tua libreria</span>
+                    </div>
+                </div>
+
+                <!-- playlist -->
+                <!--  -->
+                <div class="playlist-prefer invisible">
+                    <h3>Playlist</h3>
+                    <div>
+                        <i class="fa fa-plus"></i>
+                        Crea Playlist
+                    </div>
+                    <ul>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <i class="fa fa-arrow-circle-o-down"></i>
+                    <div>
+                        <img class="profile" src="img/profile.svg" alt="profile">
+                        <span>John Doe</span>
+                    </div>
+                    
+                </div>
+            </aside>
+
+            <section>section 2</section>
         </main>
     </body>
 </html>

@@ -102,3 +102,63 @@
     width: 100px;
     /* perchè qui non funziona flex-basis? */
 }
+
+/* MAIN */
+main {
+    background-color: #141922;
+    height: calc(100vh - 60px);
+    display: flex;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    flex-shrink: 1;
+}
+
+/* aside */
+.img-spotify {
+    width: 100px;
+}
+.logo-small-brand img {
+    width: 25px;
+}
+.icon-home {
+    width: 25px;
+    vertical-align: middle;
+}
+.text-home {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.profile {
+    width: 10px;
+}
+.playlist-prefer {
+    flex-grow: 1;
+}
+/* versione smartphone */
+@media all and (max-width: 768px) {
+    .visible-xs-inline-block {
+        display: inline-block;
+    }
+
+    .hidden-xs {
+        display: none;
+    }
+    .invisible {
+        visibility: hidden;
+    }
+}
+
+/* versione tablet */
+@media all and (min-width: 769px) {
+    .hidden-sm {
+        display: none;
+    }
+
+    .visible-sm-inline-block {
+        display: inline-block;
+    }
+}
