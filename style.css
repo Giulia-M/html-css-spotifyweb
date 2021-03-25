@@ -244,3 +244,6 @@ div.music-playback-history>div {
         flex-basis: 50%;
     }
 }
+.text-align {
+    text-align: center;
+}
