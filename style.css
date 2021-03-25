@@ -178,11 +178,11 @@ aside {
     }
 }
 
-/* SECTION 2 ACCANTO L'ASIDE  */
+/* SECTION 2 a destra ACCANTO ALL'ASIDE  */
 .wrapper-lost-of-music {
     width: calc(100vw - 150px);
     overflow: auto;
-
+    /* contenuto scrollerà  */
 }
 .wrapper-lost-of-music > div> button> a {
     background-color:#080b12;
@@ -192,19 +192,55 @@ aside {
 
 /*  */
 .list-options {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .list-options li {
     list-style: none;
     display: inline-block;
+    padding: 0 10px;
 } 
 .list-options > li> a {
     color: white;
 }
-/* tablet */
+
+
+/*  */
+.recently-played-albums {
+    display: flex;
+    flex-direction: column;
+}
+.music-playback-history {
+    display: flex;
+    /* in modo tale che tutti i div che racchiudono le img si dispongono in row orizzontalmente */
+    flex-wrap: wrap;
+    /* flex-basis: calc(100% / 6); */
+}
+div.music-playback-history>div {
+    flex-grow: 1;
+}
+.music-playback-history img {
+    max-width:170px;
+}
+
+/* applico media query in modo da far andare a capo le img  */
+
+/* versione lg  */
 @media all and (min-width: 992px) {
-    .list-options > li  {
-        width: calc(100% / 5 - 10px);
+    div.music-playback-history {
+        flex-basis: calc(100% / 6);
     }
-    /* non so se da la giusta centratura tra i testi */
+}
+/* versione md  */
+@media all and (min-width: 992px) {
+    div.music-playback-history {
+        flex-basis: calc(100% / 4);
+    }
+}
+/* versione sm */
+@media all and (min-width: 768px) {
+    div.music-playback-history {
+        flex-basis: 50%;
+    }
 }
