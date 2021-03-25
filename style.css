@@ -215,32 +215,32 @@ aside {
     display: flex;
     /* in modo tale che tutti i div che racchiudono le img si dispongono in row orizzontalmente */
     flex-wrap: wrap;
-    /* flex-basis: calc(100% / 6); */
 }
 div.music-playback-history>div {
-    flex-grow: 1;
+    padding: 0 10px;
+    flex-basis:calc(100% / 6);
 }
 .music-playback-history img {
-    max-width:170px;
+    width: 100%;
 }
 
 /* applico media query in modo da far andare a capo le img  */
 
 /* versione lg  */
 @media all and (min-width: 992px) {
-    div.music-playback-history {
+    div.music-playback-history>div {
         flex-basis: calc(100% / 6);
     }
 }
 /* versione md  */
-@media all and (min-width: 992px) {
-    div.music-playback-history {
+@media all and (min-width: 769px) and (max-width:991px) {
+    div.music-playback-history>div {
         flex-basis: calc(100% / 4);
     }
 }
 /* versione sm */
-@media all and (min-width: 768px) {
-    div.music-playback-history {
+@media all and (max-width: 768px) {
+    div.music-playback-history>div {
         flex-basis: 50%;
     }
 }
