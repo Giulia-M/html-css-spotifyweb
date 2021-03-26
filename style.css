@@ -230,11 +230,14 @@ div.wrapper-songs-history-row >div {
     text-align: center;
 }
 
-
+.features-img-title {
+    max-width: 200px;
+    text-align: center;
+    margin: auto;
+}
 .wrapper-songs-history-row img {
     width: 100%;
     max-width: 200px;
-    
 }
 
 /* applico media query in modo da far andare a capo le img  */
