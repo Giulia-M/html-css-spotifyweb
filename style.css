@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 /* colori  */
-.dark {
+.dark-toolbar {
     background-color: #282828;
+}
+.dark-bar {
+    background-color: #080b12;
+}
+.dark-aside {
+    background-color: #000;
 }
 .text-white {
     color: white;
@@ -293,4 +299,9 @@ div.wrapper-songs-history-row >div {
 }
 .circular-overlay {
     border-radius: 50%;
+}
+/* da rivedere */
+.features-img-title ~ div.text-center {
+    max-width: 200px;
+    margin: 0 auto;
 }
