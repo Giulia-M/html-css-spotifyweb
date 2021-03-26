@@ -9,6 +9,7 @@
 }
 .dark-bar {
     background-color: #080b12;
+    height: 80px;
 }
 .dark-aside {
     background-color: #000;
@@ -190,17 +191,54 @@ aside {
     overflow: auto;
     /* contenuto scrollerà  */
 }
-.wrapper-lost-of-music > div> button> a {
+.wrapper-lost-of-music > div button> a {
     background-color:#080b12;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    color: #fff;
+    white-space: nowrap;
+    padding: 8px 34px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+
 }
-
-
+.wrapper-lost-of-music > div button {
+    border-radius: 500px;
+    border-color: #000;
+}
+.padding-20 {
+    padding: 20px 10px;
+}
+/* effetto hover su button upgrade */
+.wrapper-lost-of-music > div button:hover {
+    transform: scale(1.1); 
+}
 
 /*  */
 .list-options {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+
+}
+.list-options li:first-child {
+    position: relative;
+}
+#green-line::after {
+    content: "";
+    height: 2px;
+    width: 23px;
+    background-color: #99e22d;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .list-options li {
     list-style: none;
@@ -208,13 +246,23 @@ aside {
     padding: 0 10px;
 } 
 .list-options > li> a {
-    color: white;
+    color: #66686e;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+}
+#green-border {
+    border-bottom: 1px solid #;
 }
 
 
+/* effetto hover lista */
+.list-options > li> a:hover {
+    color: #fff;
+}
+
 /* sezione intitolata recently-played */
-
-
 
 .album-custom-flex-col {
     display: flex;
