@@ -219,47 +219,47 @@ aside {
     display: flex;
     /* in modo tale che tutti i div che racchiudono le img si dispongono in row orizzontalmente */
     flex-wrap: wrap;
+    margin: 0 -10px;
     
 }
 
 
 
 div.wrapper-songs-history-row >div {
-    padding: 0 10px;
-    flex-basis: calc(100% / 6);
-    text-align: center;
+    padding: 10px;
+    flex-basis: 50%;
 }
 
 .features-img-title {
     max-width: 200px;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
 }
 .wrapper-songs-history-row img {
     width: 100%;
-    max-width: 200px;
 }
 
 /* applico media query in modo da far andare a capo le img  */
 
+/* MOBILE FIRST */
+/* versione sm  */
+
+
+@media all and (min-width:768px) {
+    div.wrapper-songs-history-row >div {
+        flex-basis: 25%;
+    }
+}
 
 /* versione md  */
 
 
-@media all and (min-width: 769px) and (max-width:991px) {
+@media all and (min-width: 992px) {
     div.wrapper-songs-history-row >div {
-        flex-basis: calc(100% / 4);
+        flex-basis: 16.6666%;
     }
 }
 
-/* versione sm */
-
-
-@media all and (max-width: 768px) {
-    div.wrapper-songs-history-row >div {
-        flex-basis: 50%;
-    }
-}
 .img-circular {
     border-radius: 50%;
     height: auto;
