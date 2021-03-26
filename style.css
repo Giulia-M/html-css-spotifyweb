@@ -219,14 +219,17 @@ aside {
     display: flex;
     /* in modo tale che tutti i div che racchiudono le img si dispongono in row orizzontalmente */
     flex-wrap: wrap;
+    
 }
 
 
 
-div.wrapper-songs-history-row >div {
+div.wrapper-songs-history-row >div.flex-grow {
     padding: 0 10px;
-    flex-basis:calc(100% / 6);
+    flex-basis: calc(100% / 6);
+
 }
+
 
 .wrapper-songs-history-row img {
     width: 100%;
@@ -234,17 +237,12 @@ div.wrapper-songs-history-row >div {
 
 /* applico media query in modo da far andare a capo le img  */
 
-/* versione lg  */
-
 
 @media all and (min-width: 992px) {
     div.wrapper-songs-history-row >div {
         flex-basis: calc(100% / 6);
     }
 }
-
-
-
 /* versione md  */
 
 
@@ -262,6 +260,11 @@ div.wrapper-songs-history-row >div {
         flex-basis: 50%;
     }
 }
+.img-circular {
+    border-radius: 50%;
+    height: auto;
+}
+
 
 
 
