@@ -219,8 +219,6 @@ aside {
     display: flex;
     /* in modo tale che tutti i div che racchiudono le img si dispongono in row orizzontalmente */
     flex-wrap: wrap;
-    margin: 0 -10px;
-    
 }
 
 
@@ -269,6 +267,7 @@ div.wrapper-songs-history-row >div {
 
 /* effetto hover */
 .icon-play-hover {
+    z-index: 1;
     font-size: 50px;
     display: none;
     position: absolute;
@@ -279,18 +278,19 @@ div.wrapper-songs-history-row >div {
 .features-img-title:hover .icon-play-hover  {
     display: block;
 }
-.features-img-title:after {
+
+.features-img-title:hover .overlay {
+    opacity: 1;
+}
+.overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background:rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    content: "\A";
-
+    opacity: 0;   
 }
-.features-img-title:hover:after {
-    opacity: 1;
-
+.circular-overlay {
+    border-radius: 50%;
 }
