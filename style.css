@@ -234,6 +234,8 @@ div.wrapper-songs-history-row >div {
     max-width: 200px;
     text-align: center;
     margin: 0 auto;
+    position:relative;
+    /* inserisco il position per inserire l'icona del play come position absolute */
 }
 .wrapper-songs-history-row img {
     width: 100%;
@@ -265,23 +267,30 @@ div.wrapper-songs-history-row >div {
     height: auto;
 }
 
-
-
-/* diverse prove */
-.tratto-grande {
-    display: flex;
+/* effetto hover */
+.icon-play-hover {
+    font-size: 50px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.fg {
-    flex-grow: 1;
-    flex-basis: 300px;
-    max-height: 300px;
+.features-img-title:hover .icon-play-hover  {
+    display: block;
 }
-.dimensioni-img {
-    flex-basis: 200px;
-    max-height: 200px;
-}
-
-
-.dimensioni-img>img {
+.features-img-title:after {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    content: "\A";
+
+}
+.features-img-title:hover:after {
+    opacity: 1;
+
 }
