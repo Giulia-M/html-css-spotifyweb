@@ -53,7 +53,7 @@
             <!--  contenuto centrale ha 2 div uno SOTTO l'altro   -->
             <div class="wrapper-player">
                
-                <!-- è un problema se vanno a capo ridimensionando lo schermo? -->
+                <!--  -->
                 <div class="text-center">
                     <span class="video-player-icon"><i class="fa fa-random"></i></span>
                     <span class="video-player-icon"><i class="fa fa-step-backward"></i></span>
@@ -105,27 +105,27 @@
 
                 </div>
 
-                <div>
-                    <div>
+                <div class="aside-menu">
+                    <div class="menu-active">
                         <img class="icon-home" src="img/home.svg" alt="home">
-                        <span class="text-home hidden-xs">Home</span> 
+                        <span class="text-home hidden-inline-xs">Home</span> 
                     </div>
                     <div>
                         <img class="icon-home" src="img/search.svg" alt="search">
-                        <span class="text-home hidden-xs">Cerca</span> 
+                        <span class="text-home hidden-inline-xs">Cerca</span> 
                     </div>
                     <div>
                         <img class="icon-home" src="img/libreria.svg" alt="libreria">
-                        <span class="text-home hidden-xs">La tua libreria</span>
+                        <span class="text-home hidden-inline-xs">La tua libreria</span>
                     </div>
                 </div>
 
                 <!-- playlist -->
                 <!--  -->
-                <div class="playlist-prefer invisible">
+                <div class="playlist-prefer hidden-xs">
                     <h3>Playlist</h3>
                     <div>
-                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-plus add-playlist"></i>
                         Crea Playlist
                     </div>
                     <ul>
@@ -141,9 +141,11 @@
 
                 <div>
                     <i class="fa fa-arrow-circle-o-down"></i>
-                    <div>
-                        <img class="profile" src="img/profile.svg" alt="profile">
-                        <span>John Doe</span>
+                    <div class="profile-wrapper">
+                        <span class="profile-img-circle">
+                            <img class="profile" src="img/profile.svg" alt="profile">
+                        </span>
+                        <span class="hidden-inline-xs">John Doe</span>
                     </div>
                     
                 </div>

@@ -5,6 +5,16 @@
     font-family: 'Lato', sans-serif;
 }
 /* colori  */
+.add-playlist {
+    background-color: #6d6f75;
+    height: 32px;
+    width: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
 .dark-toolbar {
     background-color: #282828;
 }
@@ -14,7 +24,14 @@
 }
 .dark-aside {
     background-color: #000;
+
 }
+@media all and (max-width:767.9px) {
+    .dark-aside {
+        text-align: center;
+    }
+}
+
 .text-white {
     color: white;
 }
@@ -63,7 +80,7 @@
     padding: 0 5px;
 }
 
-@media all and (max-width:991px) {
+@media all and (max-width:991.9px) {
     .display-flex-column {
         flex-direction: column;
         display: flex;
@@ -75,7 +92,7 @@
     flex-basis: 400px;
 }
 
-/* smartphone  */
+
 @media all and (max-width:768px) {
     .wrapper-player {
         flex-basis: auto;
@@ -111,8 +128,27 @@
     border-radius: 100px;
     background: #fff;
     height: 5px;
-    width:20px;
+    width:30px;
+    position: relative;
 }
+.progress:hover .progress-value {
+    background-color:#99e22d;
+}
+.progress-value:after {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: grey;
+    display: none;
+    content: "";
+    top: -2px;
+    right: -4px;
+}
+.progress:hover .progress-value:after {
+    display: block;
+}
+
 #general-bar {
     height: 5px;
     flex-basis: 300px;
@@ -136,14 +172,42 @@ main {
 aside {
     display: flex;
     flex-direction: column;
-    width: 150px;
+    width: 40px;
     flex-shrink: 1;
     overflow:auto;
     /* in modo che mi compare la 
     scroll nella sezione della playlist */
+    padding:10px 0;
+
+}
+.aside-menu {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+.menu-active {
+    position: relative;
+}
+.menu-active::before {
+    position: absolute;
+    content: "";
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid #99e22d;
+}
+/* versione tablet aside */
+@media all and (min-width: 768px) {
+    aside {
+        width: 150px;
+        padding: 10px;
+    }
+    .aside-menu {
+        flex-grow: 0;
+    }
 }
 
 /* aside */
+
 .img-spotify {
     width: 100px;
 }
@@ -163,27 +227,48 @@ aside {
     width: 10px;
 }
 .playlist-prefer {
-    flex-grow: 1;
-    overflow:auto;
+    display: none;
 }
-/* versione smartphone */
-@media all and (max-width: 768px) {
-    .visible-xs-inline-block {
-        display: inline-block;
+@media all and (min-width: 768px) {
+    .playlist-prefer {
+        flex-grow: 1;
+        overflow:auto;
+        display: block;
+        margin-top: 20px;
+    }
+    .profile-wrapper {
+        margin-top: 5px;
+        padding-top: 5px;
+        border-top: 1px solid grey;
     }
 
-    .hidden-xs {
-        display: none;
-    }
-    .invisible {
-        visibility: hidden;
-    }
+}
+
+.profile-img-circle {
+    background-color: #6d6f75;
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.hidden-xs, .hidden-inline-xs {
+    display: none;
 }
 
 /* versione tablet */
-@media all and (min-width: 769px) {
+@media all and (min-width: 768px) {
     .hidden-sm {
         display: none;
+    }
+
+    .hidden-xs {
+        display: block;
+    }
+
+    .hidden-inline-xs {
+        display: inline-block
     }
 
     .visible-sm-inline-block {
@@ -193,9 +278,14 @@ aside {
 
 /* SECTION 2 a destra ACCANTO ALL'ASIDE  */
 .wrapper-lost-of-music {
-    width: calc(100vw - 150px);
+    width: calc(100vw - 40px);
     overflow: auto;
     /* contenuto scrollerà  */
+}
+@media (min-width: 768px) {
+    .wrapper-lost-of-music {
+        width: calc(100vw - 150px);
+    }
 }
 .wrapper-lost-of-music > div button> a {
     background-color:#080b12;
