@@ -488,8 +488,12 @@ aside {
     flex-wrap: wrap;
 }
 
-
-
+.ml-10 {
+    margin-left: 10px;
+}
+.mt-7 {
+    margin-top: 7px;
+}
 div.wrapper-songs-history-row >div {
     padding: 10px;
     flex-basis: 50%;
@@ -549,6 +553,7 @@ div.wrapper-songs-history-row >div {
 .features-img-title:hover .overlay {
     opacity: 1;
 }
+
 .overlay {
     position: absolute;
     width: 100%;
