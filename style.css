@@ -319,10 +319,24 @@ aside {
 .playlist-prefer ul li a {
     text-decoration: none;
     color: #535353;
+    font-size: 12px;
 }
 .text-home:hover {
     color: #fff;
     cursor: pointer;
+}
+.my-arrow {
+    color: #535353;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text-install {
+    color:#535353;;
+    font-size: 12px;
+}
+.text-install:hover {
+    cursor: pointer;
+    color: #fff;
 }
 @media all and (min-width: 768px) {
     .playlist-prefer {
@@ -333,10 +347,13 @@ aside {
     }
     .profile-wrapper {
         margin-top: 5px;
-        padding-top: 5px;
+        padding-top: 10px;
         border-top: 1px solid grey;
     }
 
+}
+.account {
+    font-size: 14px;
 }
 
 .profile-img-circle {
@@ -454,6 +471,10 @@ aside {
 .album-custom-flex-col {
     display: flex;
     flex-direction: column;
+    margin-bottom: 32px;
+}
+.artisti-piu-popolari {
+    margin-top: 32px;
 }
 
 .wrapper-songs-history-row {
