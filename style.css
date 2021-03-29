@@ -14,7 +14,9 @@
     justify-content: center;
     color: black;
 }
-
+.mb-7 {
+    margin-bottom: 7px;
+}
 .hover-cursor:hover .add-playlist
  {
     cursor: pointer;
