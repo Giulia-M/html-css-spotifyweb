@@ -14,11 +14,12 @@
     justify-content: center;
     color: black;
 }
-.add-playlist:hover {
-    background-color: #fff;
-}
-.hover-cursor:hover {
+
+.hover-cursor:hover .add-playlist
+ {
     cursor: pointer;
+    background-color: #fff;
+
 }
 .dark-toolbar {
     background-color: #282828;
@@ -44,6 +45,10 @@
     color:#6d6f75;
     font-size: 12px;
     font-weight: bolder;
+    margin-top: 7px;
+}
+.text-color-grey >h5 {
+    margin-top: 7px;
 }
 /* classi helper */
 
@@ -306,7 +311,7 @@ aside {
     font-size: 14px;
     margin-left: 4px;
 }
-.crea-playlist:hover {
+.hover-cursor:hover .crea-playlist {
     color: #fff;
 }
 .mt-7 {
