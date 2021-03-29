@@ -69,6 +69,7 @@
     display: flex;
     align-items: center;
     margin-left: 16px;
+    flex-basis: 250px;
 }
 
 .box-img {
@@ -115,27 +116,19 @@
 /*content-middle  */
 .wrapper-player {
     flex-basis: 400px;
+    flex-grow: 1;
 }
-
-
-@media all and (max-width:768px) {
-    .wrapper-player {
-        flex-basis: auto;
-    }
-}
-
 .play-controls-buttons {
     text-align: center;
-    margin-bottom: 10px;
 }
 .text-center {
     text-align: center;
 }
 .playbackbar{
     display: flex;
-    flex-grow: 1;
+    max-width: 300px;
+    margin: auto;
     align-items: center;
-    justify-content: space-evenly;
 }
 .video-player-icon {
     padding: 0 7px ;
@@ -159,15 +152,15 @@
 .progress {
     border-radius: 100px;
     display: flex; 
+    flex-grow: 1;
     background-color: #5a5a5a;
-    width: 80px;
+    height: 5px;
 }
-  
 .progress-value {
     border-radius: 100px;
     background: #c1c1c1;
     height: 5px;
-    width:90px;
+    width:50px;
     position: relative;
 }
 .progress:hover .progress-value {
@@ -188,22 +181,29 @@
     display: block;
 }
 
-#general-bar {
-    height: 5px;
-    flex-basis: 300px;
+#time-left {
+    margin-right: 4px;
+}
+
+#time-right {
+    margin-left: 4px;
 }
 /*content-right  */
 .content-right {
-    align-items: center;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     margin-right: 16px;
+    flex-basis: 250px;
 }
-#volum-bar {
-    height: 5px;
-    flex-basis: 80px;
+#volum {
+    max-width: 80px;
+    width: 80px;
 }
-#volum-width {
-    width: 20px;
+    
+
+#progress-volum {
+    width:20px;
 }
 
 
