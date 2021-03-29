@@ -68,23 +68,48 @@
 .content-left {
     display: flex;
     align-items: center;
+    margin-left: 16px;
 }
 
 .box-img {
-    width: 50px;
+    width: 40px;
+
 }
 .box-img img {
     width: 100%;
 } 
-.padd {
-    padding: 0 5px;
+.wrapper-track-artist {
+    margin: 0 10px;
+}
+.playing-track-link {
+    font-size: 12px;
+    
+}
+.playing-artist {
+    font-size: 9px;
+    color: #767676;
+    text-decoration: none;
+}
+.playing-artist:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
+.control-button {
+    color: #727272;
+    font-size: 14px;
+    padding: 0 5px;
+}
 @media all and (max-width:991.9px) {
     .display-flex-column {
         flex-direction: column;
         display: flex;
     }
+}
+.control-button:hover {
+    color: white;
+    cursor: pointer;
 }
 
 /*content-middle  */
@@ -99,7 +124,10 @@
     }
 }
 
-
+.play-controls-buttons {
+    text-align: center;
+    margin-bottom: 10px;
+}
 .text-center {
     text-align: center;
 }
@@ -112,23 +140,34 @@
 .video-player-icon {
     padding: 0 7px ;
 }
+.video-player-icon:hover {
+    cursor: pointer;
+}
 #play-circle{
     font-size: 25px;
 }
 
+.progress-time {
+    font-size: 10px;
+}
+.play-controls-buttons > span#play-circle:hover {
+    transform: scale(1.4); 
+    display: inline-block;
+}
+
 /* progress-bar */
 .progress {
-    background: rgba(255,255,255,0.1);
     border-radius: 100px;
-    padding: 0 5px;
     display: flex; 
+    background-color: #5a5a5a;
+    width: 80px;
 }
   
 .progress-value {
     border-radius: 100px;
-    background: #fff;
+    background: #c1c1c1;
     height: 5px;
-    width:30px;
+    width:90px;
     position: relative;
 }
 .progress:hover .progress-value {
@@ -136,10 +175,10 @@
 }
 .progress-value:after {
     position: absolute;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height:10px;
     border-radius: 50%;
-    background-color: grey;
+    background-color:  #c1c1c1;
     display: none;
     content: "";
     top: -2px;
@@ -157,11 +196,16 @@
 .content-right {
     align-items: center;
     display: flex;
+    margin-right: 16px;
 }
 #volum-bar {
     height: 5px;
-    width: 50px;
+    flex-basis: 80px;
 }
+#volum-width {
+    width: 20px;
+}
+
 
 /* MAIN */
 main {
@@ -228,6 +272,11 @@ aside {
 }
 .playlist-prefer {
     display: none;
+}
+
+.playlist-prefer ul li a {
+    text-decoration: none;
+    color: #535353;
 }
 @media all and (min-width: 768px) {
     .playlist-prefer {

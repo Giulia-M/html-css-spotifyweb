@@ -19,7 +19,6 @@
     
         <!-- toolbar contenitore padre con 3 figli -->
 
-        <!-- PROBLEMA nelle versioni mobile e tablet : non rimane nessun spazio tra i 3 figli  sotto i 478px-->
         <div class="toolbar dark-toolbar text-white">
 
             <!-- contenuto a sinistra:  con 3 elementi  -->
@@ -31,20 +30,18 @@
                     </div>
                 </div>
                 <!--div con 2 elementi uno SOTTO l'altro  -->
-                <div class="padd">
-                    <div>
-                        <h5>Sinister</h5>
-                    </div>
-                    <div>
-                        <span>Brano Nome</span>
-                    </div>
+                <div class="wrapper-track-artist">
+                    <h4 class="playing-track-link">Sinister</h4>
+                    
+                    <a  class="playing-artist" href="#">Brano Nome</a>
                 </div>
                 <!--cuore brano preferito e folder che in xs(<768px) e sm(>768) devono stare una sotto l'altra perciò aggiungo la media query    -->
+                
                 <div class="display-flex-column">
-                    <span class="padd">
+                    <span class="control-button">
                         <i class="fa fa-heart-o"></i>
                     </span>
-                    <span class="padd">
+                    <span class="control-button">
                         <i class="fa fa-folder-o"></i>
                     </span>
                 </div> 
@@ -54,7 +51,7 @@
             <div class="wrapper-player">
                
                 <!--  -->
-                <div class="text-center">
+                <div class="play-controls-buttons">
                     <span class="video-player-icon"><i class="fa fa-random"></i></span>
                     <span class="video-player-icon"><i class="fa fa-step-backward"></i></span>
                     <span class="video-player-icon" id="play-circle"><i class="fa fa-play-circle-o"></i></span>
@@ -64,28 +61,28 @@
 
                 <!-- playbackbar -->
                 <div class="playbackbar">
-                    <div>0:25</div>
+                    <div class="progress-time">0:25</div>
                     <div class="progress" id="general-bar">
                         <div class="progress-value"></div>
                     </div>
-                    <div>4:35</div>
+                    <div class="progress-time">4:35</div>
                 </div>
                 
             </div>
 
             <!-- contenuto a destra: ha 3 elementi all'interno  -->
             <div class="content-right">
-                <span class="padd">
+                <div class="video-player-icon">
                     <i class="fa fa-list"></i>
-                </span>
-                <span class="padd">
+                </div>
+                <div class="video-player-icon">
                     <i class="fa fa-desktop"></i>
-                </span>
-                <span class="padd">
+                </div>
+                <div class="video-player-icon">
                     <i class="fa fa-volume-up"></i>
-                </span>
-                <div class="progress padd" id="volum-bar">
-                    <div class="progress-value"></div>
+                </div>
+                <div class="progress" id="volum-bar">
+                    <div class="progress-value" id="volum-width"></div>
                 </div>
             </div>
         </div>
