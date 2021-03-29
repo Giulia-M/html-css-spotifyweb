@@ -14,7 +14,12 @@
     justify-content: center;
     color: black;
 }
-
+.add-playlist:hover {
+    background-color: #fff;
+}
+.hover-cursor:hover {
+    cursor: pointer;
+}
 .dark-toolbar {
     background-color: #282828;
 }
@@ -132,6 +137,9 @@
 }
 .video-player-icon {
     padding: 0 7px ;
+    font-size: 11px;
+    vertical-align: middle;
+    display: inline-block;
 }
 .video-player-icon:hover {
     cursor: pointer;
@@ -165,6 +173,7 @@
 }
 .progress:hover .progress-value {
     background-color:#99e22d;
+    cursor: pointer;
 }
 .progress-value:after {
     position: absolute;
@@ -205,7 +214,12 @@
 #progress-volum {
     width:20px;
 }
+.control-button-extra {
+    padding: 0 5px;
+    font-size: 12px;
+    cursor: pointer;
 
+}
 
 /* MAIN */
 main {
@@ -230,6 +244,7 @@ aside {
 }
 .menu-active {
     position: relative;
+    margin: 6px 0;
 }
 .menu-active::before {
     position: absolute;
@@ -238,6 +253,9 @@ aside {
     top: 0;
     bottom: 0;
     border-left: 2px solid #99e22d;
+}
+.menu-active-wo {
+    margin: 6px 0;
 }
 /* versione tablet aside */
 @media all and (min-width: 768px) {
@@ -250,7 +268,6 @@ aside {
     }
 }
 
-/* aside */
 
 .img-spotify {
     width: 100px;
@@ -265,6 +282,8 @@ aside {
 .text-home {
     vertical-align: middle;
     display: inline-block;
+    color:#555555;
+    font-size: 14px;
 }
 
 .profile {
@@ -273,10 +292,37 @@ aside {
 .playlist-prefer {
     display: none;
 }
+.playlist-prefer>h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.playlist-prefer-plus {
+    margin: 6px 0;
+}
 
+.crea-playlist {
+    display: inline-block;
+    color: #555555;
+    font-size: 14px;
+    margin-left: 4px;
+}
+.crea-playlist:hover {
+    color: #fff;
+}
+.mt-7 {
+    margin: 7px 0;
+}
+.nome-playlist:hover {
+    color: #fff;
+    cursor: pointer;
+}
 .playlist-prefer ul li a {
     text-decoration: none;
     color: #535353;
+}
+.text-home:hover {
+    color: #fff;
+    cursor: pointer;
 }
 @media all and (min-width: 768px) {
     .playlist-prefer {
@@ -317,7 +363,7 @@ aside {
     }
 
     .hidden-inline-xs {
-        display: inline-block
+        display: inline-block;
     }
 
     .visible-sm-inline-block {

@@ -52,11 +52,14 @@
                
                 <!--  -->
                 <div class="play-controls-buttons">
+                
                     <span class="video-player-icon"><i class="fa fa-random"></i></span>
                     <span class="video-player-icon"><i class="fa fa-step-backward"></i></span>
                     <span class="video-player-icon" id="play-circle"><i class="fa fa-play-circle-o"></i></span>
                     <span class="video-player-icon"><i class="fa fa-step-forward"></i></span>
                     <span class="video-player-icon"><i class="fa fa-repeat"></i></span>
+                    
+                   
                 </div>
 
                 <!-- playbackbar -->
@@ -72,13 +75,13 @@
 
             <!-- contenuto a destra: ha 3 elementi all'interno  -->
             <div class="content-right">
-                <div class="video-player-icon">
+                <div class="control-button-extra">
                     <i class="fa fa-list"></i>
                 </div>
-                <div class="video-player-icon">
+                <div class="control-button-extra">
                     <i class="fa fa-desktop"></i>
                 </div>
-                <div class="video-player-icon">
+                <div class="control-button-extra">
                     <i class="fa fa-volume-up"></i>
                 </div>
                 <div class="progress" id="volum">
@@ -88,7 +91,7 @@
         </div>
 
         <!-- main ha due contenuti uno A FIANCO all'altro-->
-        <!-- perchè ridimensionando lo schermo height del main mi da problemi? -->
+        
         <main class="text-white">
             <!-- aside -->
             <aside class="dark-aside">
@@ -107,32 +110,36 @@
                         <img class="icon-home" src="img/home.svg" alt="home">
                         <span class="text-home hidden-inline-xs">Home</span> 
                     </div>
-                    <div>
+                    <div class="menu-active-wo">
                         <img class="icon-home" src="img/search.svg" alt="search">
                         <span class="text-home hidden-inline-xs">Cerca</span> 
                     </div>
-                    <div>
+                    <div class="menu-active-wo">
                         <img class="icon-home" src="img/libreria.svg" alt="libreria">
                         <span class="text-home hidden-inline-xs">La tua libreria</span>
                     </div>
                 </div>
 
                 <!-- playlist -->
-                <!--  -->
+                
                 <div class="playlist-prefer hidden-xs">
                     <h3>Playlist</h3>
-                    <div>
-                        <i class="fa fa-plus add-playlist"></i>
-                        Crea Playlist
+                    <div class="playlist-prefer-plus">
+                        <div class="hover-cursor">
+                            <i class="fa fa-plus add-playlist"></i>
+    
+                            <h5 class="crea-playlist">Crea Playlist</h5>
+
+                        </div>
                     </div>
                     <ul>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
-                        <li><a href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
+                        <li class=" mt-7"><a class="nome-playlist" href="#">Nome Playlist</a></li>
                     </ul>
                 </div>
 
